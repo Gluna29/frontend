@@ -6,8 +6,7 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 @Component({
   selector: 'app-new-experiencia',
   templateUrl: './new-experiencia.component.html',
-  styleUrls: ['./new-experiencia.component.css'],
-  
+  styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
@@ -20,16 +19,15 @@ export class NewExperienciaComponent implements OnInit {
 
   onCreate(): void {
     const expe = new Experiencia(this.nombreE, this.descripcionE);
-    this.sExperiencia.save(expe).subscribe({
-      next: (data) => {
+    this.sExperiencia.save(expe).subscribe(
+      data => {
         alert("Experiencia añadida");
-        this.router.navigate([''])},
-
-
-      error: (err) => {
+        this.router.navigate(['']);
+      }, err => {
         alert("Falló");
-        this.router.navigate([''])},
-      });
+        this.router.navigate(['']);
+      }
+    )
   }
 
 }

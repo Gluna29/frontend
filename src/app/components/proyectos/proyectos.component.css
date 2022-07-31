@@ -14,7 +14,7 @@
     }
     @media (min-width: 500px){
     .proyectos{
-
+        object-fit: cover;
         box-shadow: 10px 10px 30px #133313;
         box-shadow: ejeX ejeY difumasion color;
         max-width: 90%;
@@ -23,7 +23,7 @@
     }} 
     @media (max-width: 500px){
         .proyectos{
-    
+            object-fit: cover;
             box-shadow: 10px 10px 30px #133313;
             box-shadow: ejeX ejeY difumasion color;
             max-width: 100%;
