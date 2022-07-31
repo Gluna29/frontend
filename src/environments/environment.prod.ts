@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiBaseUrl: 'apjgl.herokuapp.com',
+  apiAuth: 'apjgl.herokuapp.com'
 };
