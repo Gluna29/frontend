@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaserUrl: 'apjgl.herokuapp.com',
-  apiAuth: 'apjgl.herokuapp.com/Auth'
+  apiBaserUrl: 'https://apjgl.herokuapp.com',
+  apiAuth: 'https://apjgl.herokuapp.com/Auth'
 };
 
 /*
