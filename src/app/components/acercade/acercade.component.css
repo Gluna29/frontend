@@ -36,7 +36,18 @@ div{
             box-shadow: 3px 3px 3px grey;
 
         }
+        
     }
+    @media (min-width: 1500px){
+        #fotodeperfil{
+            position: absolute;
+            width: 15%;
+            border-radius: 100%;
+            box-shadow: 3px 3px 3px grey;
+            top: 680px;
+            left: 5%;
+          }
+        }
 
     
 
