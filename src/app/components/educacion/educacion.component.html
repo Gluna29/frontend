@@ -1,26 +1,31 @@
 <div class="row">
-    <h1>Educación
-    </h1>
-    <div class="clo-lg-11">
-    <ul>
-        <li>
-            <h1>Esc. Ing. Pablo Nogués.
-            </h1><h3>(1992 - 1997)</h3>
-        </li>
-        <p>Título : Maestro Mayor de Obras</p>
-        <li>
-            <h1>Universidad Tecnológica Nacional - Facultad Regional Mendoza</h1><h3>(1998 - 2009)</h3>
-        </li>
-        <p>Título : Ingeniero Civil, orientación construcciones.</p>
-        <li>
-            <h1>Universidad Tecnológica Nacional - Maestría en Ingeniería Estructural Sismo resistente.</h1><h3>(2018 - Actualidad)</h3>
-        </li>
-        <p>Título: Magíster en Ingeniería Estructural Sismorresistente.</p>
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar educacion
+        </button>
+    </div>
 
-        <li>
-            <h1>Argentina Programa</h1><h3>(2021 - Actualidad)</h3>
-        </li>
-        <p>Título: Full Stack Developer Jr.</p>
-    </ul>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i>Editar</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-warning" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i>Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </div>
+
+</div> 

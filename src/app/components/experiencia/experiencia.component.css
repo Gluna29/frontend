@@ -8,3 +8,8 @@ div{
 h1, h3{
     display: inline;
 }
+table{
+    border-spacing: 0px;
+    border-color: #96CDEB;
+    background-color: #CEE6F0;
+}
