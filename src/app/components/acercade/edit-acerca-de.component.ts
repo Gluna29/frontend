@@ -18,6 +18,7 @@ export class EditAcercaDeComponent implements OnInit {
     public imageService: ImageService) { }
  
   ngOnInit(): void {
+    this.imageService.clearUrl();
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.detail(id).subscribe(
       data =>{
@@ -37,7 +38,7 @@ export class EditAcercaDeComponent implements OnInit {
         alert("La persona se ha modificado correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la onUpdate");
+        alert("Error al modificar la persona");
         this.router.navigate(['']);
       }
     )

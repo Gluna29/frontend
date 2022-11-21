@@ -20,6 +20,7 @@ export class EditproyComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+        
     this.proyS.detail(id).subscribe(
       data =>{
         this.proy = data;
@@ -41,6 +42,7 @@ export class EditproyComponent implements OnInit {
     )
   }
   uploadImage($event: any){
+    
     this.proy.img = this.imageService.url
     const id = this.activatedRouter.snapshot.params['id'];
     const name = "proy_" + id;
